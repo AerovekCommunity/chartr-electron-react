@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "ChartrBusiness: Main",
+      "type": "node",
+      "request": "launch",
+      "protocol": "inspector",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "start"],
+      "env": {
+        "MAIN_ARGS": "--inspect=5858 --remote-debugging-port=9223"
+      }
+    },
+    {
+      "name": "ChartrBusiness: Renderer",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9223,
+      "webRoot": "${workspaceFolder}",
+      "timeout": 15000
+    }
+  ],
+  "compounds": [
+    {
+      "name": "ChartrBusiness: All",
+      "configurations": ["ChartrBusiness: Main", "ChartrBusiness: Renderer"]
+    }
+  ]
+}

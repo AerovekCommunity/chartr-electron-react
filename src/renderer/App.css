@@ -1,0 +1,258 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+body {
+  position: flex;
+  color: white;
+  height: 100vh;
+  /*background: linear-gradient(
+    180deg,
+    #F6F4F4 -29.09%,
+    #cccccc 51.77%,
+    #000000 129.35%
+  );*/
+  background: #e2e1e1;
+  overflow-y: scroll;
+  font-family: sans-serif;
+  justify-content: center;
+  margin: 0px;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+.buttonPrimary {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  appearance: none;
+  font-size: 1.0rem;
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  opacity: 0.9;
+  color:white;
+}
+
+.hintLabel {
+  color: #6e6d6d;
+}
+
+.primaryButtonContainer {
+  margin-top: 24px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  height: fit-content;
+  width: fit-content;
+}
+
+.loadingContainer {
+  vertical-align: middle;
+  line-height: 100vh;
+  text-align: center;
+}
+
+#pasteWordsLink {
+  float: right;
+  padding: 10px 0;
+}
+
+.importWordTextField {
+  margin-top:16px !important;
+}
+
+.sidebar {
+  background-color: #d0d4d6;
+  flex-direction: column;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.cardViewGradientGray {
+  padding: 32px;
+  border-radius: 16px;
+  height: auto;
+  margin-top: 24px;
+  background: linear-gradient(
+    180deg,
+    #474646 -29.09%,
+    #999898 51.77%,
+    #3b3a3a 129.35%
+  );
+}
+
+.cardViewLight {
+  padding: 32px;
+  border-radius: 16px;
+  height: auto;
+  margin-top: 24px;
+  background-color: #cbcaca;
+}
+
+.cardViewDark {
+  padding: 32px;
+  border-radius: 16px;
+  height: auto;
+  margin-top: 24px;
+  background-color: #181818;
+}
+
+
+div.sidebarButtonUnselected {
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #d0d4d6;
+}
+
+div.sidebarButtonSelected {
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  background-color: black;
+}
+
+.sidebarAvatarSelected {
+  background-color: black;
+  color: white;
+}
+
+.sidebarAvatarUnselected {
+  background-color: #d0d4d6;
+  color: black;
+}
+
+.masterDetailContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+.detail {
+  flex: 1 1 auto;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  display: block;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  padding: 38px
+}
+
+.centerLink {
+  text-align: center;
+}
+
+a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.backButton {
+  position: relative;
+  margin-top: 16px;
+}
+
+.form {
+  margin-top: 16px;
+  width: 100%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.mnemonic-word {
+  border: 1px solid #cccccc;
+  background-color: white;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  padding-right: 8px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+}
+
+span.mnemonic-word-number {
+  color: #aaaaaa;
+  padding: 3px;
+}
+
+#drop-zone {
+  border: 1px dashed #787878;
+  outline: none;
+  align-items: center;
+  border-radius: 4px;
+  background-color: lightgray;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.mnemonic-container {
+  display: flex;
+  padding: 16px;
+  border: 1px solid #787878;
+  background-color: #cccccc;
+  min-height: 120px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.avatar {
+  margin: 4px;
+  background: white;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 100;
+}
+
+.loginButtonGrid {
+  margin-top: 16px;
+}
+
+#root {
+  height: inherit;
+}
+
+.errorLabel {
+  color: rgb(176, 10, 10);
+  text-align: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+div.requiredField {
+  border-radius: 8px;
+  border: 1px solid red;
+  border-color: red;
+}

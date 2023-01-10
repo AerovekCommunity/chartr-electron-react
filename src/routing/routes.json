@@ -1,0 +1,10 @@
+{
+    "LOGIN": "/",
+    "HOME": "/home",
+    "REGISTER": "/register",
+    "WALLET": "/wallet",
+    "CREATE_CREDENTIALS": "/createCredentials",
+    "CREATE_WALLET": "/createWallet",
+    "IMPORT_WALLET": "/importWallet",
+    "VERIFY_WORDS": "/verifyWords"
+}

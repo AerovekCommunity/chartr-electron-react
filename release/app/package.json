@@ -1,0 +1,21 @@
+{
+  "name": "chartr-business",
+  "version": "1.0.0",
+  "description": "Manage your Chartr business account",
+  "license": "MIT",
+  "author": {
+    "name": "Aerovek",
+    "url": "https://aerovek.io"
+  },
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "electron-rebuild": "node -r ts-node/register ../../.erb/scripts/electron-rebuild.js",
+    "postinstall": "npm run electron-rebuild && npm run link-modules",
+    "link-modules": "node -r ts-node/register ../../.erb/scripts/link-modules.ts"
+  },
+  "dependencies": {
+    "@elrondnetwork/erdjs": "^11.0.0",
+    "@elrondnetwork/erdjs-network-providers": "^1.1.1",
+    "@elrondnetwork/erdjs-walletcore": "^2.1.0"
+  }
+}

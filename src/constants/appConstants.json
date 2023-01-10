@@ -1,0 +1,9 @@
+{
+    "SC_ADDRESS_DEVNET": "erd1qqqqqqqqqqqqqpgq0vra4223q6kwmlzrdtrcjwwrmawm0j79v8yqpygz0l",
+    "GENERIC_SENDER_ADDRESS": "erd1nkxen2p0cumk65rdmggtxng3j7j3qt0x8wjmyrr5yfpvr6v2t5rq9hqnjw",
+    "AERO_TOKEN_ID_DEVNET": "MARS-adff2c",
+    "AERO_TOKEN_ID": "AERO-458bbf",
+    "AERO_BLUE": "#0B6DFF",
+    "API_BASE_URL_DEVNET": "https://devnet-api.elrond.com",
+    "API_BASE_URL_MAINNET": "https://api.elrond.com"
+}
