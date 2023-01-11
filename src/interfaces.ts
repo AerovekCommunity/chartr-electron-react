@@ -147,7 +147,7 @@ export interface IChartrAccount {
     timestamp: string;
     email: string;
 
-    /** URL where this image is stored in Firebase storage */
+    /** URL where this image is stored */
     profileImageUrl: string;
 
     businessProfile: IBusinessProfile;
