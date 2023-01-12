@@ -59,7 +59,7 @@ Please join the [Aerovek Aviation](https://t.me/aerovekviation) channel on Teleg
 Join the [AeroDao](https://t.me/AeroDao) Telegram channel to ask development related questions about this project or the mobile projects. You can tag [Jay](https://t.me/prolowfile) if you are really stuck on something or something in the code isn't clear.
 
 ### Discord
-To chat with other community members, please join the Aerovek Discord server [Discord](https://discord.gg/PfwEt3YUKM) 
+To chat with other community members, please join the [Aerovek Discord Server](https://discord.gg/PfwEt3YUKM) 
 
 ### Code of Conduct
 Our [Code of Conduct](CODE_OF_CONDUCT.md) applies to all Aerovek community channels
