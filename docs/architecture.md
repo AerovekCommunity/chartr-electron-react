@@ -61,9 +61,10 @@ At this point we are using the free version which is good enough to get by, but 
 
 ### ErdJS
 This app uses the following packages to interact with the Elrond blockchain and create wallets and sign transactions and all that good stuff…
-[ErdJS](https://github.com/ElrondNetwork/elrond-sdk-erdjs)
-[ErdJS Network Providers](https://github.com/ElrondNetwork/elrond-sdk-erdjs-network-providers)
-[ErdJS Wallet Core](https://github.com/ElrondNetwork/elrond-sdk-erdjs-walletcore)
+
+- [ErdJS](https://github.com/ElrondNetwork/elrond-sdk-erdjs)
+- [ErdJS Network Providers](https://github.com/ElrondNetwork/elrond-sdk-erdjs-network-providers)
+- [ErdJS Wallet Core](https://github.com/ElrondNetwork/elrond-sdk-erdjs-walletcore)
 
 ### File I/O
 You can’t read or write to a file from a React component for security reasons. In order to do this you need to go through something called a [contextBridge](https://www.electronjs.org/docs/latest/api/context-bridge). See the [preload](../src/main/preload.ts) file for direction, as well as the [main](../src/main/main.ts) file as they work together.
