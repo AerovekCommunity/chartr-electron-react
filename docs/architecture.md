@@ -6,8 +6,6 @@
 
 Chartr Business is a desktop application written using the [Electron](https://www.electronjs.org/) technology along with [ReactJS](https://reactjs.org/) and [MaterialUI](https://mui.com/material-ui/getting-started/overview/)
 
-## IMPORTANT
-[Jan 2023] Until production ready, all blockchain calls and wallet operations (sending/receiving) should be done on Devnet, especially because the smart contract that stores the account data is only on Devnet. 
 
 ## Core Functions
 <ul>
