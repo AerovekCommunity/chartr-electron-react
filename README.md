@@ -47,7 +47,7 @@ Visit [Chartr Architecture Overview](./docs/architecture.md) to get an idea how 
 
 All work on the Chartr Business portal app happens directly on [GitHub](https://github.com/AerovekCommunity/chartr-electron-react). Both core team members and external contributors send pull requests which go through the same review process.
 
-If you are interested in contributing directly to the code base, the first thing you should do is read our [Litepaper](./docs/litepaper.md) to get an understanding of what Chartr is and how it's supposed to work. 
+If you are interested in contributing directly to the code base, the first thing you should do is read our [Litepaper](https://github.com/AerovekCommunity/litepaper) to get an understanding of what Chartr is and how it's supposed to work. 
 
 You can also join our Telegram and Discord channels and ask questions there. 
 
