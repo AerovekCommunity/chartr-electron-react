@@ -49,8 +49,6 @@ All work on the Chartr Business portal app happens directly on [GitHub](https://
 
 If you are interested in contributing directly to the code base, the first thing you should do is read our [Litepaper](https://github.com/AerovekCommunity/litepaper) to get an understanding of what Chartr is and how it's supposed to work. 
 
-Then in the AeroDAO Telegram channel ask to be added as a contributor and provide the email associated with your github account.
-
 ## **Submitting Code Changes**
 1. Create an issue describing the bugfix or feature you plan to work on, or if one exists already that you want to work on just assign yourself to it.
 2. Create a branch off of `main` and name it something that describes the issue. First make sure your main branch is up to date
