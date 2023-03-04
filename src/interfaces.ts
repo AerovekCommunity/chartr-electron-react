@@ -128,6 +128,7 @@ export interface IBusinessProfile {
     searchTags?: string[];
     pilotDetails?: IPilotDetails[];
     aircraftDetails?: IAircraft[];
+    flightPackages?: IFlightPackage[];
 }
 
 export interface IFlightPackage {
