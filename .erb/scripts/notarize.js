@@ -7,6 +7,7 @@ exports.default = async function notarizeMacos(context) {
     return;
   }
 
+  /*
   if (process.env.CI !== 'true') {
     console.warn('Skipping notarizing step. Packaging is not running in CI');
     return;
@@ -18,13 +19,19 @@ exports.default = async function notarizeMacos(context) {
     );
     return;
   }
+  */
 
   const appName = context.packager.appInfo.productFilename;
 
+  // See README for more details
+
+  console.log("----- NOTORIZING -----");
   await notarize({
+    tool: 'notarytool',
     appBundleId: build.appId,
     appPath: `${appOutDir}/${appName}.app`,
-    appleId: process.env.APPLE_ID,
-    appleIdPassword: process.env.APPLE_ID_PASS,
+    appleApiKey: './private_keys/AuthKey_<your-keyid>.p8',
+    appleApiKeyId: '<your-keyid>',
+    appleApiIssuer: '<issuer-id>'
   });
 };

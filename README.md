@@ -31,13 +31,49 @@ npm start
 
 ### Packaging for Production
 
+#### **Code Signing steps for Mac version**
+1. Open Keychain Access app on our Mac and select "Request a certificate from a certificate authority" and save it somewhere
+2. Go to your Apple developer account and create a new certificate of type "Developer ID Application". Download it
+  and install it into your keychain
+3. Create a new provisioning profile of the same type and choose the certificate you created in step 2
+4. Download the profile and double click to install it on your machine
+5. Create an API key to authenticate with Apple - go to App Store Connect and choose Users and Access, Keys tab, and create an API key
+  with App Manager level access. Download the key and store it in a safe place. Write down the *API Key Id* and the *Issuer Id*
+6. Create a new folder called *private_keys* at the root of this project (DO NOT COMMIT THIS TO SOURCE CONTROL!!!!)
+7. In Keychain Access, expand the certificate you installed in step 2, then right click and choose "Export 2 items" and save the file
+  inside the *private_keys* folder you just created, name it **chartr-business-privatekey.p12"**
+8. Copy the *AuthKey_<keyid>.p8* file into the *private_keys* folder.
+8. Create two env variables on your computer wherever you export your variables (ie .zshrc or whatever)
+  - `export CSC_LINK="$HOME/source/repos/chartr-electron-react/private_keys/chartr-business-privatekey.p12"`
+  - `export CSC_KEY_PASSWORD="<password created in step 7 when exporting the p12>"`
+10. In the [notarize.js](./.erb/scripts/notarize.js) file, change the following properties by adding your API key details you gathered in step 5
+
+  ```
+    await notarize({
+      tool: 'notarytool',
+      appBundleId: build.appId,
+      appPath: `${appOutDir}/${appName}.app`,
+      appleApiKey: './private_keys/AuthKey_<your-apikey-id>.p8',
+      appleApiKeyId: '<your-apikey-id>',
+      appleApiIssuer: '<your-issuer-id>'
+    });
+  ```
+
+
 To package apps for the local platform:
 
 ```bash
 npm run package
 ```
 
-That will build binaries for whatever system you run that command from (if you are on a Mac it will produce a .dmg file, etc)
+To package apps for universal Mac for example, add a few extra arguments to the npm script in package.js
+`"package": "ts-node ./.erb/scripts/clean.js dist && npm run build && electron-builder build --macos --universal",`
+
+The *release/build* folder will have the built apps for the target platform.
+
+See https://github.com/electron/notarize
+
+See https://www.electron.build/cli
 
 ## Documentation
 
@@ -51,12 +87,12 @@ If you are interested in contributing directly to the code base, the first thing
 
 ## **Submitting Code Changes**
 1. Create an issue describing the bugfix or feature you plan to work on, or if one exists already that you want to work on just assign yourself to it.
-2. Create a branch off of `main` and name it with the issue number first followed by a dash and a description related to the issue being worked on. First make sure your main branch is up to date
-    ```
-    git checkout main
-    git pull
-    git checkout -b 1-my-first-issue
-    ```
+2. Create a development branch on the issue page
+3. Checkout the branch locally
+  ```
+  git fetch origin
+  git checkout 1-my-first-issue
+  ```
 3. Do the work in that branch and commit and push to remote when ready
     ```
     git add . 
