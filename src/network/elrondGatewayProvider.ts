@@ -5,7 +5,7 @@ import { ContractQueryRequest } from "../../release/app/node_modules/@elrondnetw
 
 export class ElrondGatewayProvider extends ProxyNetworkProvider {
     constructor() {
-        super("https://devnet-gateway.elrond.com", { timeout: 10000 });
+        super("https://devnet-gateway.multiversx.com", { timeout: 10000 });
     }
 
     async queryContractString(query: IContractQuery): Promise<string> {

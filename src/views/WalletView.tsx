@@ -82,7 +82,7 @@ export default function WalletView(props: IWalletViewProps): JSX.Element {
     };
 
     const TxHashCellRenderer = (params: any) => {
-        const explorerLink = `https://devnet-explorer.elrond.com/transactions/${params.value}`;
+        const explorerLink = `https://devnet-explorer.multiversx.com/transactions/${params.value}`;
         return (
             <Button 
                 style={{'fontSize': '12px'}}
@@ -170,7 +170,7 @@ export default function WalletView(props: IWalletViewProps): JSX.Element {
     const handleTransactionSent = (hash: string) => {
         setOpenSendDialog(false);
         setSnackbarMessage("Transaction sent");
-        setSnackbarActionLink(`https://devnet-explorer.elrond.com/transactions/${hash}`);
+        setSnackbarActionLink(`https://devnet-explorer.multiversx.com/transactions/${hash}`);
         setShowSnackbar(true);
     };
 

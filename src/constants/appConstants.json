@@ -4,6 +4,6 @@
     "AERO_TOKEN_ID_DEVNET": "MARS-adff2c",
     "AERO_TOKEN_ID": "AERO-458bbf",
     "AERO_BLUE": "#0B6DFF",
-    "API_BASE_URL_DEVNET": "https://devnet-api.elrond.com",
-    "API_BASE_URL_MAINNET": "https://api.elrond.com"
+    "API_BASE_URL_DEVNET": "https://devnet-api.multiversx.com",
+    "API_BASE_URL_MAINNET": "https://api.multiversx.com"
 }
