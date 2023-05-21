@@ -4,19 +4,42 @@ import Avatar from "@mui/material/Avatar";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import Box from "@mui/system/Box";
-import { IProfileViewProps } from "interfaces";
+import { IChartrAccount, IProfileViewProps } from "interfaces";
 import { Person } from '@mui/icons-material';
 import AppConstants from '../constants/appConstants.json';
 import CountryList from '../../assets/countries.json';
+import { useState } from "react";
+import EditProfileView from "./EditProfileView";
 
 
 export default function ProfileView(props: IProfileViewProps): JSX.Element {
+    let { account } = props;
+    const [openEditProfileDialog, setOpenEditProfileDialog] = useState<boolean>(false);
+
     const country = CountryList.find(countryObj => {
         return countryObj.code === props.account?.businessProfile?.country
     })?.name;
 
+    const handleCloseAddPilotDialog = () => {
+        setOpenEditProfileDialog(false);
+    }
+
+    const handleProfileUpdated = (updatedAccount: IChartrAccount) => {
+        alert('Profile updated successfully, check back in a few minutes while the transaction completes!');
+        setOpenEditProfileDialog(false);
+        account = updatedAccount;
+    }
+
     return (
         <Box sx={{ flexGrow: 1 }}>
+            <EditProfileView
+                account={props.account!}
+                open={openEditProfileDialog}
+                onClose={handleCloseAddPilotDialog} 
+                profileUpdated={handleProfileUpdated}
+                userSettings={props.userSettings}
+                password={props.password}
+            />
             <div className='cardViewDark'>
                 <Grid container spacing={2} columns={16}>
                     <Grid item xs={8}>
@@ -63,7 +86,7 @@ export default function ProfileView(props: IProfileViewProps): JSX.Element {
                         className="buttonPrimary"
                         fullWidth
                         onClick={() => {
-                            alert("Coming soon...");
+                            setOpenEditProfileDialog(true);
                         }}
                     >
                         Edit Profile

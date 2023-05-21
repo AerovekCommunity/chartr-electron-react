@@ -58,6 +58,8 @@ export interface IAccountViewProps {
 
 export interface IProfileViewProps {
     account: IChartrAccount | null;
+    password: string;
+    userSettings: IUserSettings;
 }
 
 export interface IPilotsViewProps {
@@ -85,6 +87,15 @@ export interface ICreateAccountViewProps {
     userSettings: IUserSettings;
     accountCreated: (successful: boolean) => void;
     password: string;
+}
+
+export interface IEditProfileViewProps {
+    open: boolean;
+    userSettings: IUserSettings;
+    profileUpdated: (account: IChartrAccount) => void;
+    password: string;
+    onClose: () => void;
+    account: IChartrAccount;
 }
 
 export interface IPilotCertificate {
