@@ -98,7 +98,7 @@ export default function Login(props: any): JSX.Element {
         }
       }
     } catch (error: any) {
-      showErrorMessage("Login failed. Invalid keyfile and password combination.")
+      showErrorMessage("Login failed. Invalid keyfile and password combination. REASON: \n\n\t" + error.message)
     }
   }
 

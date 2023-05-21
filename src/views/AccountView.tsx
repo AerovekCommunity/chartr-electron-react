@@ -86,7 +86,11 @@ export default function AccountView(props: IAccountViewProps): JSX.Element {
             </Tabs>
 
             <TabPanel selectedTab={selectedTab} tabIndex={0} >
-                <ProfileView account={chartrAccount} />
+                <ProfileView 
+                    account={chartrAccount} 
+                    userSettings={props.userSettings}  
+                    password={props.password}
+                />
             </TabPanel>
             <TabPanel selectedTab={selectedTab} tabIndex={1} >
                 <PilotsView 
